@@ -68,7 +68,7 @@ public class SQCache {
         db.insertWithOnConflict(TABLE, null, values, SQLiteDatabase.CONFLICT_REPLACE);
         db.close();
     }
-    
+
 
 
 
