@@ -16,7 +16,7 @@ repositories {
 
 And add the following in the dependences of build.gradle:
 ```
-compile 'it.jellyfish.sqcache:sqcache:1.0.0'
+compile 'it.jellyfish.sqcache:sqcache:1.0.1'
 ```
 
 ## How to use
