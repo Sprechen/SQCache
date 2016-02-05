@@ -63,12 +63,14 @@ public class SQCache {
         Cursor cursor = db.query(TABLE, null, KEY + "=?", new String[]{key}, null, null, null, null);
         if (cursor.getCount() == 0) {
             cursor.close();
+            db.close();
             return null;
         }
         cursor.moveToNext();
         String v = cursor.getString(1);
         long timer = cursor.getLong(2);
         cursor.close();
+        db.close();
         long now = System.currentTimeMillis();
         if (timer!=Config.INFINITE && now > timer) {
             toDelete(key);
